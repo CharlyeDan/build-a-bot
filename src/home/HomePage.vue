@@ -1,0 +1,34 @@
+<template>
+  <div class="home">
+    <div >
+      <img class="robot" src="../assets/robot-home.png"
+        aria-hidden="true">
+    </div>
+    <div class="get-started">
+      <!-- <a href="">Get Started</a> Building your first robot! -->
+      <router-link to="/build">Get Started </router-link> Building your first robot!
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'HelloWorld',
+  created() {
+    console.log(process.env.VUE_APP_TEST, process.env.SOME_TEST);
+  },
+  props: {
+    msg: String,
+  },
+};
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+.home {
+  text-align: center;
+}
+.robot {
+  height: 300px;
+}
+</style>
